@@ -1,0 +1,28 @@
+
+http://burlakilia.github.io/playground/#-LNKCrpeYVMNyYYMW8Na
+
+const RUB_IN_DOLAR = 68;
+
+function sumRub(a="", b="") {
+
+    if (a.toUpperCase().indexOf("R") !=-1 && b.toUpperCase().indexOf("R") !=-1 ) {
+      return  parseFloat(a)+parseFloat(b);
+    }
+    if (a.toUpperCase().indexOf("R") !=-1 && b.toUpperCase().indexOf("$") !=-1 ) {
+      return  parseFloat(a)+parseFloat(b)*RUB_IN_DOLAR;
+    }
+    if (a.toUpperCase().indexOf("$") !=-1 && b.toUpperCase().indexOf("R") !=-1 ) {
+      return   parseFloat(a)*RUB_IN_DOLAR+parseFloat(b);
+    }
+    if (a.toUpperCase().indexOf("$") !=-1 && b.toUpperCase().indexOf("$") !=-1 ) {
+      return   parseFloat(a)*RUB_IN_DOLAR+parseFloat(b)*RUB_IN_DOLAR;
+    }
+    return "Тип вылюты не определен"
+}
+
+
+console.log(sumRub('10R', '1$'));
+console.log(sumRub('1$', '10$'));
+console.log(sumRub('10R', '10R'));
+console.log(sumRub('10$', '10$'));
+console.log(sumRub('10', '10'));
