@@ -13,7 +13,7 @@ function getMinMax(str) {
 
     for (let i = 0; i < strLength; i++) {
         let Symb = str.charAt(i);
-        let NumberStr="1234567890-."
+        let NumberStr="1234567890-.";
         if(NumberStr.indexOf(Symb) != -1){
             Concotinate = Concotinate+Symb;
         }
