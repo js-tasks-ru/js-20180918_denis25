@@ -1,0 +1,26 @@
+http://burlakilia.github.io/playground/#-LNPqosyp8lVxwxEAYwm
+'use strict';
+
+let user = {
+    firstName: 'ilia',
+    lastName: 'burlak',
+    age: 30,
+    options: {
+        color: 'white'
+    }
+};
+
+function run(obj)
+{
+    for (let key in obj) {
+        if (typeof obj[key] == "object"){
+            console.log(typeof obj[key] )
+         run(obj[key]);   
+        }
+        else{
+        console.log(typeof obj[key] )
+        }
+    }
+};
+
+run(user)
